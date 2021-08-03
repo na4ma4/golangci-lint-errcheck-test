@@ -12,7 +12,7 @@ cat "errcheck-exclude.txt"
 
 artifacts/bin/errcheck -verbose ./...
 checking github.com/na4ma4/golangci-lint-errcheck-test/cmd/errcheck-test
-cmd/errcheck-test/main.go:23:23:	(io.Closer).Close	defer resp.Body.Close()
+cmd/errcheck-test/main.go:23:23:    (io.Closer).Close    defer resp.Body.Close()
 make: [artifacts/errcheck/lint] Error 1 (ignored)
 
 artifacts/bin/errcheck -verbose -exclude errcheck-exclude.txt ./... | tee "artifacts/errcheck/lint"
