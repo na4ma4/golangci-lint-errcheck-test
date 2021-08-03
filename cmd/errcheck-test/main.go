@@ -20,6 +20,7 @@ func main() {
 
 	resp, err := http.DefaultClient.Do(r)
 	checkErr(err)
+
 	defer resp.Body.Close()
 
 	log.Printf("HTTP Status Code: %d", resp.StatusCode)

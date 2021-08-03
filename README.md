@@ -35,23 +35,14 @@ make: *** Deleting file `artifacts/lint/golangci-lint'
 
 ```yaml
 linters:
-  enable-all: true
-  exclude-use-default: false
-  disable:
-    - exhaustivestruct
-    - forbidigo
-    - golint
-    - interfacer
-    - maligned
-    - scopelint
+  enable:
+    - errcheck
 
 issues:
   exclude-use-default: false
 
 linters-settings:
-  govet:
-    check-shadowing: true
   errcheck:
     exclude-functions:
-      - (io.Closer).Close
+    - (io.Closer).Close
 ```
